@@ -1566,24 +1566,95 @@ import math
 # n = int(input())
 # print(is_prime(n))
 
-def is_password_good(password):
-    count = 0
-    alfabet_numbers = ['123456789', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ']
-    if len(password) >= 8:
-        for j in range(len(alfabet_numbers) + 1):
-            for i in password:
-                if i in alfabet_numbers[j]:
-                    count += 1
-                    continue
-                else:
-                    continue
-        if count == 3:
-            return True
-        else:
-            return False
-    else:
-        return False
-# считываем данные
-txt = input()
-# вызываем функцию
-print(is_password_good(txt))
+# def is_password_good(password): # Функция проверки валидности пароля
+#     count = 0
+#     alfabet_numbers = ['123456789', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ']
+#     if len(password) >= 8:
+#         for i in password:
+#             for j in range(len(alfabet_numbers)):
+#                 if i in alfabet_numbers[j]:
+#                     count += 1
+#                     alfabet_numbers[j] = []
+#                 else:
+#                     continue
+#         if count == 3:
+#             return True
+#         else:
+#             return False
+#     else:
+#         return False
+# # считываем данные
+# txt = input()
+# # вызываем функцию
+# print(is_password_good(txt))
+
+# def is_one_away(word1, word2): # функция поочередно сравнивает значения в двух списках
+#     count = 0
+#     if len(word1) == len(word2):
+#         for i in range(len(word1)):
+#             if word1[i] == word2[i]:
+#                 continue
+#             else:
+#                 count += 1
+#     else:
+#         return False
+#     if count == 1:
+#         return True
+#     else:
+#         return False
+# # считываем данные
+# txt1 = input()
+# txt2 = input()
+# # вызываем функцию
+# print(is_one_away(txt1, txt2))
+
+# def is_palindrome(text): # Функция определяющаяя стрку Палиндром
+#     text1 = ''
+#     for i in range(len(text)):
+#         if text[i] not in ',.!?- ':
+#             text1 += text[i].lower()
+#         else:
+#             continue
+#     if len(text1) % 2 == 0:
+#         if text1[:len(text1) // 2] == text1[:(len(text1) - 1) // 2:-1]:
+#             return True
+#         else:
+#             return False
+#     else:
+#         if text1[:(len(text1) - 1) // 2] == text1[:(len(text1)) // 2:-1]:
+#             return True
+#         else:
+#             return False
+# # # считываем данные
+# text = input()
+# # вызываем функцию
+# print(is_palindrome(text))
+
+# def is_valid_password(password): # Функция проверки валидности пароля по 4рем показателям
+#     count = 0
+#     if len(password) == 3:
+#         if len(password[0]) % 2 ==0:
+#             if password[0][:len(password[0]) // 2] == password[0][:(len(password[0]) - 1) // 2:-1]:
+#                 count += 1
+#         else:
+#             if password[0][:(len(password[0]) - 1) // 2] == password[0][:(len(password[0])) // 2:-1]:
+#                 count += 1
+#         count2 = 0
+#         if int(password[1]) > 1:
+#             for i in range(1, int(password[1]) + 1):
+#                 if int(password[1]) % i == 0:
+#                     count2 += 1
+#             if count2 == 2:
+#                 count += 1
+#         if int(password[2]) % 2 == 0:
+#             count += 1
+#         if count == 3:
+#             return True
+#         else:
+#             return False
+#     else:
+#         return False
+# # считываем данные
+# psw = input().split(':')
+# # вызываем функцию
+# print(is_valid_password(psw))
