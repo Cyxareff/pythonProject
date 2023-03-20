@@ -1658,3 +1658,80 @@ import math
 # psw = input().split(':')
 # # вызываем функцию
 # print(is_valid_password(psw))
+
+# def is_correct_bracket(text): # Функция проверяет правильную скобочную последовательность
+#     count1 = 0
+#     if len(text) % 2 == 0:
+#         if text[0] != ')' and text[-1] != '(':
+#             for i in range(len(text)):
+#                 if count1 >= 0:
+#                     if text[i] == '(':
+#                         count1 += 1
+#                     elif text[i] == ')':
+#                         count1 -= 1
+#                 else:
+#                     return False
+#         else:
+#             return False
+#     else:
+#         return False
+#     if count1 == 0:
+#         return True
+#     else:
+#         return False
+# # считываем данные
+# txt = input()
+# # вызываем функцию
+# print(is_correct_bracket(txt))
+#
+# def convert_to_python_case(text): # Функция меняющая регистр с CamalCase на snake_case
+#     a = ''
+#     a += txt[0]
+#     for i in range(1, len(txt)):
+#         if txt[i] in '1234567890':
+#             a += txt[i]
+#         else:
+#             if txt[i] == txt[i].upper():
+#                 a += '_'
+#                 a += txt[i]
+#             else:
+#                 a += txt[i]
+#     return a.lower()
+# # считываем данные
+# txt = list(input())
+# # вызываем функцию
+# print(convert_to_python_case(txt))
+#
+# def get_middle_point(x1, y1, x2, y2): # Функция находящаа середину отрезка по заданным двум точкам
+#     x = (x1 + x2) / 2
+#     y = (y1 + y2) / 2
+#     return x, y
+# # считываем данные
+# x_1, y_1 = int(input()), int(input())
+# x_2, y_2 = int(input()), int(input())
+# # вызываем функцию
+# x, y = get_middle_point(x_1, y_1, x_2, y_2)
+# print(x, y)
+#
+# def get_circle(radius): # Функция которая вычисляет площадь и длину окружности
+#     import math
+#     c = 2 * math.pi * r
+#     s = math.pi * r ** 2
+#     return c, s
+# # считываем данные
+# r = float(input())
+# # вызываем функцию
+# length, square = get_circle(r)
+# print(length, square)
+#
+# def solve(a, b, c): # Функция находящая корни уровнения
+#     d = b ** 2 - 4 * a * c
+#     x1 = (-b + d ** 0.5) / (2 * a)
+#     x2 = (-b - d ** 0.5) / (2 * a)
+#     return min(x1, x2), max(x1, x2)
+# # считываем данные
+# a, b, c = int(input()), int(input()), int(input())
+# # вызываем функцию
+# x1, x2 = solve(a, b, c)
+# print(x1, x2)
+
