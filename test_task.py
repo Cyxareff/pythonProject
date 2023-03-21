@@ -1735,3 +1735,83 @@ import math
 # x1, x2 = solve(a, b, c)
 # print(x1, x2)
 
+# def draw_triangle(): # Функция Равнобедренного треугольника с выстой 8 и основание 15
+#     for i in range(8):
+#         print(' ' * (8 - 1 - i) + '*' * (1 + i * 2))
+# # основная программа
+# draw_triangle()  # вызов функции
+
+# def compute_binom(n, k): # Функция возвращающая биноминальный коэффициент
+#     from math import factorial
+#     return int(factorial(n) / (factorial(k) * factorial(n - k)))
+# # считываем данные
+# n = int(input())
+# k = int(input())
+# # вызываем функцию
+# print(compute_binom(n, k))
+
+# def number_to_words(num): # Функция переводящая введенное число в слова
+#     to_10 = ['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять']
+#     of_20 = ['двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят', 'девяносто']
+#     ten_20 = ['десять', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать', 'шестнадцать',
+#               'семнадцать', 'восемнадцать', 'девятнадцать']
+#     if  0 <= n <= 9:
+#         return to_10[n]
+#     elif 10 <= n <= 19:
+#         return ten_20[n % 10]
+#     if 20 <= n < 100 and n % 10 != 0:
+#         return of_20[n // 10 - 2] + ' ' + to_10[n % 10]
+#     else:
+#         return of_20[n // 10 - 2]
+# # считываем данные
+# n = int(input())
+# # вызываем функцию
+# print(number_to_words(n))
+
+# def get_month(language, number): #Функция возвращающая слово месяц в зависимсти от введенного числа и языка
+#     list1 = ['', 'январь', 'февраль', 'март', 'апрель', 'май', 'июнь',
+#              'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
+#     list2 = ['', 'january', 'february', 'march', 'april', 'may', 'june',
+#              'july', 'august', 'september', 'october', 'november', 'december']
+#     if lan == 'ru':
+#         return list1[num]
+#     elif lan == 'en':
+#         return list2[num]
+# # считываем данные
+# lan = input()
+# num = int(input())
+# # вызываем функцию
+# print(get_month(lan, num))
+
+# def is_magic(date): # функция проверяет введеную дату на Магическую дату
+#     if date[1][0] == 0:
+#         if 0 < int(date[0]) * int(date[1][1]) < 99 and int(date[0]) * int(date[1][1]) == int(date[2][2] + date[2][3]):
+#             return True
+#         else:
+#             False
+#     else:
+#         if 0 < int(date[0]) * int(date[1]) < 99 and int(date[0]) * int(date[1]) == int(date[2][2] + date[2][3]):
+#             return True
+#         else:
+#             return False
+# # считываем данные
+# date = input().split('.')
+# # вызываем функцию
+# print(is_magic(date))
+
+# date = input().split('.')
+# print(type(int(date[2][2] + date[2][3])), int(date[2][2] + date[2][3]))
+
+# def is_pangram(text): #Функция проверяющая страку на Панграмму
+#     a = []
+#     for i in text:
+#         if i in 'abcdefghijklmnopqrstuvwxyz' and i not in a:
+#             a.append(i)
+#     if len(a) == 26:
+#         return True
+#     else:
+#         return False
+# # считываем данные
+# text = input().lower()
+# # вызываем функцию
+# print(is_pangram(text))
