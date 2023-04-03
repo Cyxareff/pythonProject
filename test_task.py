@@ -1815,3 +1815,37 @@ import math
 # text = input().lower()
 # # вызываем функцию
 # print(is_pangram(text))
+
+# n = int(input()) # Угадывание числа в диапозоне от 1 до n за нименьшее число попыток
+# t = int(input())
+# count = 0
+# left = 1
+# middle = (left + n) // 2
+# while middle != t:
+#     if middle == t:
+#         count += 1
+#         print(count)
+#         break
+#     elif middle < t:
+#         left = middle + 1
+#         middle = (left + n) // 2
+#         count += 1
+#         continue
+#     else:
+#         n = middle - 1
+#         middle = (left + n) // 2
+#         count += 1
+#         continue
+# print(count)
+
+# n = int(input()) # угадывание числа за наименьшее число попыток
+# count = 0
+# while n > 1:
+#     n /= 2
+#     count += 1
+# print(count)
+
+
+
+
+
